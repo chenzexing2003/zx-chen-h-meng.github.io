@@ -41,8 +41,8 @@
     
     
     <title>
-        
-            试一试 | Hexo
+          
+            Hexo
         
     </title>
     
@@ -113,12 +113,9 @@
     </v-list>
     <v-divider></v-divider>
     
-        <div class="post-toc">
-            <a href="/zx-chen-h-meng.github.io/2022/08/09/%E8%AF%95%E4%B8%80%E8%AF%95/" class="toc-header">Table of Contents</a>
-            <div class="toc-content">
-                
-            </div>
-        </div>
+        <v-list id="sub-menu" class="font-weight-medium" dense>
+            
+        </v-list>    
     
 
     <div id="footer">
@@ -219,66 +216,29 @@
   </v-col>
 </v-row>
 
-                            <v-card class="elevation-2 post-card">
-    
-    
-        <div class="post-header">
-  <a class="post-header-title font-weight-medium" href="/zx-chen-h-meng.github.io/2022/08/09/%E8%AF%95%E4%B8%80%E8%AF%95/">试一试</a>
-  <div class="post-header-meta">   
-    <span>
-      <v-icon color="">event</v-icon>
-      Posted on:&nbsp;2022-08-09
-    </span>
-    <span>
-      <v-icon color="">event_available</v-icon>
-      Edited on:&nbsp;2022-08-09
-    </span>
-    <span>
-      <v-icon color="">folder</v-icon>
-      In:&nbsp;Uncategorized
-    </span>
-    
-    <span>
-      <v-icon color="">visibility</v-icon>
-      Views:&nbsp;<span id="busuanzi_container_page_pv"><span id="busuanzi_value_page_pv"></span></span>
-    </span>
-    
-  </div>
-</div>
-
-    
-    
-    
-    
-    <div class="post-content typo">
-        <figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">  <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-
-    </div>
-    <!--文末结束语-->
-    
-        <div style="text-align:center;color: #ccc;font-size:24px;"> --- 本文结束 <i class="fas fa-heart"></i> The End --- </div>
-    
-    <!--页脚广告-->
-    
-    <v-divider></v-divider>
-    
-    <div class="post-nav">             
-              
-          
-            <div class="post-nav-button float-right">
-                <a class="font-weight-bold text-right" href="/zx-chen-h-meng.github.io/2022/08/09/hello-world/">      
-                    Hello World
-                </a>
-                <v-icon>chevron_right</v-icon>
-            </div>
+                            <v-card class="elevation-2 index-card">
+    <v-timeline class="timeline" dense>
+        <v-timeline-item class="timeline-header" color="secondary lighten-2">
+            <span class="timeline-title">XCPC</span>
+            <span class="timeline-subtitle">Tags</span>
+        </v-timeline-item>
         
-    </div>
+            <v-timeline-item fill-dot small color="secondary lighten-2">
+                <div class="timeline-item-post d-none d-md-block">
+                    <span class="timeline-item-time">2022.08.09</span>
+                    <a href="/zx-chen-h-meng.github.io/2022/08/09/2020-2021-Winter-Petrozavodsk-Camp-Belarusian-SU-Contest-XXI-Open-Cup-Grand-Prix-of-Belarus-%E7%AE%80%E8%A6%81%E9%A2%98%E8%A7%A3/" class="timeline-item-title">2020-2021 Winter Petrozavodsk Camp, Belarusian SU Contest (XXI Open Cup, Grand Prix of Belarus) 简要题解</a>
+                </div>
+                <div class="timeline-item-post-mobile d-block d-md-none">
+                    <span class="timeline-item-time">2022.08.09</span><br>
+                    <a href="/zx-chen-h-meng.github.io/2022/08/09/2020-2021-Winter-Petrozavodsk-Camp-Belarusian-SU-Contest-XXI-Open-Cup-Grand-Prix-of-Belarus-%E7%AE%80%E8%A6%81%E9%A2%98%E8%A7%A3/" class="timeline-item-title">2020-2021 Winter Petrozavodsk Camp, Belarusian SU Contest (XXI Open Cup, Grand Prix of Belarus) 简要题解</a>
+                </div>
+                <v-divider></v-divider>
+            </v-timeline-item>
+        
+    </v-timeline>
 </v-card>
 
-
-
-        
+         
                             <div id="mobile-footer" class="d-block d-md-none">
                                 <v-divider></v-divider>
                                 <div id="mobile-footer-content">
@@ -307,12 +267,6 @@
 
 
 
-
-    <script src="https://cdn.jsdelivr.net/npm/mermaid@8.4.8/dist/mermaid.min.js"></script>
-    <script>mermaid.initialize({
-        startOnLoad: true,
-        theme: "default"
-    });</script>
 
 
 
