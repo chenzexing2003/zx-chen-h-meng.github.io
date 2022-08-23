@@ -34,62 +34,6 @@
 
     
     
-    
-        <script>
-  if (typeof MathJax === 'undefined') {
-    window.MathJax = {
-      loader: {
-        
-            load: ['[tex]/mhchem'],
-        
-        source: {
-          '[tex]/amsCd': '[tex]/amscd',
-          '[tex]/AMScd': '[tex]/amscd'
-        }
-      },
-      tex: {
-        inlineMath: {'[+]': [['$', '$']]},
-        
-            packages: {'[+]': ['mhchem']},
-        
-        tags: 'ams'
-      },
-      options: {
-        renderActions: {
-          findScript: [10, doc => {
-            document.querySelectorAll('script[type^="math/tex"]').forEach(node => {
-              const display = !!node.type.match(/; *mode=display/);
-              const math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display);
-              const text = document.createTextNode('');
-              node.parentNode.replaceChild(text, node);
-              math.start = {node: text, delim: '', n: 0};
-              math.end = {node: text, delim: '', n: 0};
-              doc.math.push(math);
-            });
-          }, '', false],
-          insertedScript: [200, () => {
-            document.querySelectorAll('mjx-container').forEach(node => {
-              let target = node.parentNode;
-              if (target.nodeName.toLowerCase() === 'li') {
-                target.parentNode.classList.add('has-jax');
-              }
-            });
-          }, '', false]
-        }
-      }
-    };
-    (function () {
-      var script = document.createElement('script');
-      script.src = 'https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js';
-      script.defer = true;
-      document.head.appendChild(script);
-    })();
-  } else {
-    MathJax.startup.document.state(0);
-    MathJax.texReset();
-    MathJax.typeset();
-  }
-</script>
           
 
     
@@ -97,8 +41,8 @@
     
     
     <title>
-          
-            Hexo
+        
+            search | Hexo
         
     </title>
     
@@ -284,54 +228,18 @@
   </v-col>
 </v-row>
 
-                            <v-card class="elevation-2 index-card">
-  
-    <article class="index-article">
-      
-      <div class="index-article-header">
-        <v-row no-gutters>
-          <v-col cols="auto">
-            <div class="index-article-header-date font-weight-medium">
-              2022-08-09
-            </div>
-          </v-col>
-          <v-spacer></v-spacer>
-          <v-col cols="auto">
-            
-              <v-card flat color="secondary" tile class="index-article-header-tag  font-weight-medium">
-                
-                  <span class="index-article-header-tag-content">
-                    <v-icon>fas fa-tag</v-icon>
-                    <a rel="tag" href = /zx-chen-h-meng.github.io/tags/2022/ >2022</a>
-                  </span>
-                
-              </v-card>
-            
-          </v-col>
-        </v-row>
-        <span>
-          
-            <a class="index-article-header-category font-weight-bold" href="/zx-chen-h-meng.github.io/categories/XCPC/">XCPC></a>
-           
-        </span> 
-        <a class="index-article-header-title font-weight-medium" href="/zx-chen-h-meng.github.io/2022/08/09/2020-2021-Winter-Petrozavodsk-Camp-Belarusian-SU-Contest-XXI-Open-Cup-Grand-Prix-of-Belarus-%E7%AE%80%E8%A6%81%E9%A2%98%E8%A7%A3/">2020-2021 Winter Petrozavodsk Camp, Belarusian SU Contest (XXI Open Cup, Grand Prix of Belarus) 简要题解</a>
-      </div>
-      
-      <div class="index-article-content">
+                            <v-card class="elevation-2 post-card">
+    <div class="post-header">
+        <a class="post-header-title font-weight-medium" href="/zx-chen-h-meng.github.io/search/index.html">Search</a>
+    </div>
+    <div class="post-content typo">
         
-          C. Brave Seekers of Unicorns考虑进行$dp$。设$dp[i]$为以$i$结尾的数列数，$pre[i]$为以小于等于$i$结尾的数列数，有$dp[0]&#x3D;1$。转移方程为：$$dp[i]&#x3D;pre[i-1]-\sum_{j&#x3D;0}^{i-1}j&lt;(i\otimes j)&lt;i$$其中前一半是所有结尾小于$i$的方案之和，后一半为使得最后三项为$0$的方案数。现在考虑如何快速求后一半。观察可得，对于一个特定的$i$，如果它在二进制下的第$k$位为$1$，那么对于任意$2^k\leq j&lt;2^{k+1}-1$，有$i\otim...
+            <v-text-field label="Search" v-model="searchPageValue" prepend-icon="search" clearable clear-icon="clear" @keydown.enter="EnterSearch(searchPageValue,true)"></v-text-field>
+            <v-card class="elevation-0" id="search-result"></v-card>
         
-      </div>
-      
-      <div class="index-article-readmore ">
-        <v-btn text href="/zx-chen-h-meng.github.io/2022/08/09/2020-2021-Winter-Petrozavodsk-Camp-Belarusian-SU-Contest-XXI-Open-Cup-Grand-Prix-of-Belarus-%E7%AE%80%E8%A6%81%E9%A2%98%E8%A7%A3/">Read More</v-btn>
-      </div>
-      <v-divider></v-divider>
-    </article> 
-   
-</v-card>  
-
-         
+    </div>
+</v-card>
+        
                             <div id="mobile-footer" class="d-block d-md-none">
                                 <v-divider></v-divider>
                                 <div id="mobile-footer-content">
